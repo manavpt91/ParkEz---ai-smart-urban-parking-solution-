@@ -1,9 +1,9 @@
-# ParkEz---ai-smart-urban-parking-solution-
+# 🚗 ParkEz - Smart Parking Prediction System
+
 🚀 The Core InnovationMost parking apps tell you what is happening now. We tell you what happens next.AI-Powered Forecasts: Predicts zone-wise occupancy using XGBoost and LSTMs.
 Context-Aware: Factores in local festivals, market days, and office peak hours.Smart Routing: Suggests the most cost-effective and fuel-efficient path to a guaranteed spot.🛠️ Tech StackIntelligence: Python, Scikit-Learn, TensorFlow/PyTorch.Data: OpenStreetMap API, Historical Traffic Logs, Event RSS Feeds.Interface: Streamlit / Flask (for the interactive dashboard).Analysis: Pandas for temporal feature engineering.
 
 🏗️ System ArchitectureData Ingestion: Scrapes real-time traffic flow and local event calendars.Feature Engineering: Converts "Friday night + Concert nearby" into a high-demand numerical feature.The Model: A regression-based model outputs a Confidence Score (%) for vacancy in specific city zones.Optimization: A routing algorithm calculates the best path based on fuel consumption and walking distance to the destination.
-# 🚗 ParkEz - Smart Parking Prediction System
 
 
 ---
@@ -47,24 +47,9 @@ Heading downtown? We prioritize parking near public transit, making it easy to p
 ### ⚡ **Real-Time Updates**
 Car just left a spot near you? You'll get a notification instantly. First come, first served.
 
----
 
-## 📊 Results That Matter
 
-We tested ParkEz using real parking data from San Francisco, NYC, and Seattle:
 
-| Metric | Before | After | Improvement |
-|--------|--------|-------|-------------|
-| **Average search time** | 8 minutes | 2 minutes | **75% faster** |
-| **Fuel wasted searching** | 0.5L per trip | 0.1L per trip | **80% reduction** |
-| **Downtown congestion** | Baseline | -40% | Significant relief |
-| **Driver satisfaction** | 42% happy | 87% happy | People actually like parking now |
-
-**The bigger picture:** If deployed city-wide, ParkEz could save 450 million hours of time and reduce CO₂ emissions by 50,000 tons annually in a mid-sized city.
-
----
-
-## 🛠️ How It Works
 
 ### The Tech Stack
 
@@ -107,27 +92,7 @@ Simple concept, but the ML model is doing a lot under the hood. It analyzes 47 d
 
 ---
 
-## 🎓 The Machine Learning
 
-We trained our model on over 2 million parking records from open datasets. Here's what we learned:
-
-**Key Features That Matter Most:**
-1. **Time of day** (cyclically encoded—midnight and 11:59pm are similar)
-2. **Day of week** (Fridays are brutal, Sundays are chill)
-3. **Nearby events** (concert = forget about parking within 1km)
-4. **Historical occupancy** (some zones are always full at certain times)
-5. **Traffic density** (when roads are jammed, parking fills up)
-
-**Model Performance:**
-- **RMSE:** 0.082 (industry average is 0.15—we're doing well)
-- **R² Score:** 0.91 (explains 91% of parking variance)
-- **Prediction Speed:** 87ms average (fast enough for real-time)
-- **Confidence Calibration:** 89% accurate (when we say "high confidence," we mean it)
-
-**Why LightGBM?**
-We tried several approaches. Random Forest was too slow. Neural networks were overkill and needed more data. LightGBM hit the sweet spot: fast training, excellent accuracy, handles missing data well, and we can explain its predictions.
-
----
 
 
 
